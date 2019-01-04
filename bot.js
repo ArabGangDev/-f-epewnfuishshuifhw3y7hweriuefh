@@ -47,7 +47,7 @@ client.on("message", message => {
  });
 client.on('message', message => {//Toxic Codes
               if (!message.channel.guild) return;
-      if(message.content =='$count')//Toxic Codes
+      if(message.content =='.count')//Toxic Codes
       var IzRo = new Discord.RichEmbed()//Toxic Codes
       .setThumbnail(message.author.iconURL)//Toxic Codes
       .setFooter(message.author.username, message.author.avatarURL)
