@@ -117,6 +117,7 @@ client.on("message", message => {
 				.addField("**.avatar**" ,"يرسل رابط فيه صورت بروفايلك")
 								.addField("**.new**" ,"تفتح تذكرة")
 												.addField("**.close**" ,"تسكر تذكرة")
+	      .addField("**.quran**" ,"يفتح لك القران من 200 صفحه تتنقل بين الصفحات بل ايموجي")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
