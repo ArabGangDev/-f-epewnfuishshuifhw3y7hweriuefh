@@ -21,7 +21,7 @@ client.on('message', message => {
       let member = client.guilds.get(message.guild.id).members.get(message.author.id);
       let personalInvites = invs.filter(i => i.inviter.id === message.author.id);
       let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
-    return message.reply(`**${inviteCount}: عدد الاشخاص الذي دعوتهم هو**`)
+    return message.reply(`Your Invites Are **: ${inviteCount} :grin:**`)
 
 });
 }});
