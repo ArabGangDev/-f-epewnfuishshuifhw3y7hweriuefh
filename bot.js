@@ -6,6 +6,7 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('---------------')
 });
+var prefix = ".";
 client.on('message', message => {
              if (!message.channel.guild) return;
       if (message.author.bot) return;
