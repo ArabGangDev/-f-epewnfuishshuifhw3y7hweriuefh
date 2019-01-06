@@ -138,7 +138,6 @@ client.on("message", message => {
 												.addField("**.close**" ,"تسكر تذكرة")
 	      .addField("**.quran**" ,"يفتح لك القران من 200 صفحه تتنقل بين الصفحات بل ايموجي")
 .addField("**.invites**" ,"يضهر لك عدد انفايتاتك")
-                .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
  }
