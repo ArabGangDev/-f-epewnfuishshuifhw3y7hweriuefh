@@ -183,7 +183,7 @@ client.on('guildMemberAdd', member => {
         .setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | الاسم : ', `${member}`)
         .addField(':microphone2: | Welcome!', `${member}`)
-        .addField(':id: | الحساب :', "**[" + `${member.id}` + "]**")
+        .addField(':id: | اي دي :', "**[" + `${member.id}` + "]**")
         .addField(':family_mwgb: | انت العضو رقم', `${member.guild.memberCount}`)
         .setTimestamp()
 
