@@ -222,7 +222,7 @@ client.on('message', message => {
 });
 var prefix = ".";
 client.on('message', async message => {//Toxic Codes
-          if(message.content.startsWith(prefix + "activate")) {//Toxic Codes
+          if(message.content.startsWith(prefix + "تفعيل")) {//Toxic Codes
             message.member.addRole(message.guild.roles.find("name", "-Member"));
             message.reply("** تم تفعيلك استمتع 🚀   **")//Toxic Codes
 			.then(msg => {msg.delete(3000)});
