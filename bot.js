@@ -142,6 +142,11 @@ client.on("message", message => {
   message.author.sendEmbed(embed);
  }
  });
+client.on('guildMemberAdd', member => {
+	console.log('User ' + member.user.username + ' has joined the server!')
+	var role = member.guild.roles.find('name', '-Owner');
+	member.addRole(role)
+});
 client.on('message', message => {//Toxic Codes
               if (!message.channel.guild) return;
       if(message.content =='.count')//Toxic Codes
