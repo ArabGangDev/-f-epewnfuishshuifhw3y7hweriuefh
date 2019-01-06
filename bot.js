@@ -181,10 +181,10 @@ client.on('guildMemberAdd', member => {
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .addField(':bust_in_silhouette: | name : ', `${member}`)
+        .addField(':bust_in_silhouette: | الاسم : ', `${member}`)
         .addField(':microphone2: | Welcome!', `Welcome to RinoShop:money_mouth:, ${member}`)
-        .addField(':id: | User :', "**[" + `${member.id}` + "]**")
-        .addField(':family_mwgb: | Your are the member', `${member.guild.memberCount}`)
+        .addField(':id: | الحساب :', "**[" + `${member.id}` + "]**")
+        .addField(':family_mwgb: | انت العضو رقم', `${member.guild.memberCount}`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
