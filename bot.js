@@ -29,7 +29,6 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
     .setThumbnail(Sal.user.avatarURL)
-    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //هنا حط الصوره الي تبيها
     .setTitle('عضو جديد!')
     .setDescription('مرحبا بك بالسيرفر')
     .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
@@ -38,7 +37,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('name', ' (ᏔᎬᏞᏨᏫᎷᎬ)') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Sal.guild.channels.find('name', 'ترحيب🏡')
     if (!channel) return;
     channel.send({embed : embed});
     });
@@ -190,21 +189,6 @@ client.on('message', message => {
      
   message.channel.sendEmbed(embed);
     }
-});
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'ترحيب🏡');
-    let memberavatar = member.user.avatarURL
-        if (!channel) return;
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':bust_in_silhouette: | الاسم : ', `${member}`)
-        .addField(':microphone2: | Welcome!', `${member} RinoShop اهلا وسهلا بك في سيرفر `)
-        .addField(':id: | اي دي :', "**[" + `${member.id}` + "]**")
-        .addField(':family_mwgb: | انت العضو رقم', `${member.guild.memberCount}`)
-        .setTimestamp()
-
-        channel.sendEmbed(embed);
 });
 client.on("message", (message) => {
     if (message.content.startsWith(".ban ")) {
