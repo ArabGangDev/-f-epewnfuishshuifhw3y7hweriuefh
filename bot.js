@@ -182,7 +182,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | الاسم : ', `${member}`)
-        .addField(':microphone2: | Welcome!', `Welcome to RinoShop:money_mouth:, ${member}`)
+        .addField(':microphone2: | Welcome!', `${member}`)
         .addField(':id: | الحساب :', "**[" + `${member.id}` + "]**")
         .addField(':family_mwgb: | انت العضو رقم', `${member.guild.memberCount}`)
         .setTimestamp()
