@@ -239,6 +239,13 @@ client.on('message', async message => {//Toxic Codes
 			.then(msg => {msg.delete(3000)});
           }//Toxic Codes
         }); //Toxic Codes
+client.on('message', async message => {//Toxic Codes
+          if(message.content.startsWith("تفعيل.")) {//Toxic Codes
+            message.member.addRole(message.guild.roles.find("name", "-Member"));
+            message.reply("** تم تفعيلك استمتع 🚀   **")//Toxic Codes
+			.then(msg => {msg.delete(3000)});
+          }//Toxic Codes
+        }); //Toxic Codes
 client.on("message", (message) => {
    if (message.content.startsWith(".new")) {     
         const reason = message.content.split(" ").slice(1).join(" ");     
