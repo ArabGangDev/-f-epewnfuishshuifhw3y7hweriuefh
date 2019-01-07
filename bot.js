@@ -25,6 +25,19 @@ client.on('message', message => {
 
 });
 }});
+client.on('guildMemberAdd', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('531778654976606218').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('531778715529510925').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+});
+
+client.on('guildMemberRemove', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('531778654976606218').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('531778715529510925').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+});
 client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
