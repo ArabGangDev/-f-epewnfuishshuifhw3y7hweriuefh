@@ -31,7 +31,6 @@ client.on('guildMemberAdd', member => {
     client.channels.get('531778654976606218').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
     client.channels.get('531778715529510925').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
-
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
@@ -41,12 +40,10 @@ client.on('guildMemberRemove', member => {
 client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
-    .setThumbnail(Sal.user.avatarURL)
-    .setTitle('عضو جديد!')
-    .setDescription('مرحبا بك بالسيرفر')
-    .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
-    .addField('``تاق العضو``', Sal.user.discriminator, true)
-    .addField('``تم الانشاء في``', Sal.user.createdAt, true)
+    .setThumbnail(Sal.user.avatarURL
+    .addField('``:id: ايدي العضو``:',"" +  Sal.user.id, true)
+    .addField('``:zero:تاق العضو``', Sal.user.discriminator, true)
+    .addField('``📅 تم الانشاء في``', Sal.user.createdAt, true)
     .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
