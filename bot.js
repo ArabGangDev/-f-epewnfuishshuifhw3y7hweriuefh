@@ -40,7 +40,7 @@ client.on('guildMemberRemove', member => {
 client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
-    .setThumbnail(Sal.user.avatarURL
+    .setThumbnail(Sal.user.avatarURL)
     .addField('``:id: ايدي العضو``:',"" +  Sal.user.id, true)
     .addField('``:zero:تاق العضو``', Sal.user.discriminator, true)
     .addField('``📅 تم الانشاء في``', Sal.user.createdAt, true)
