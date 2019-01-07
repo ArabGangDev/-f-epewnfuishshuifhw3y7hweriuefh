@@ -44,7 +44,7 @@ client.on('guildMemberAdd', member => {
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
     const logChannel = member.guild.channels.find(channel => channel.name === "تاكيد-الانفايت📚");
-    logChannel.send(`${member} تمت دعوتك من قبل: <@${inviter.id}>`);
+    logChannel.send(`<@${inviter.id}> تمت دعوتك من قبل: ${member}`);
   });
 });//Narox
 client.on('guildMemberAdd', member => {
