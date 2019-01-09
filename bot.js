@@ -331,25 +331,4 @@ member.send( `${member} ` + "**" + `RinoBroadcast v1.0` + " : ** " + message.con
 															
 });
 });
-client.on("ready", async  => {
-  setInterval(function(){
-  client.channels.find('id', '531790845461135371').setName("W");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("We");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Wel");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welc");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welco");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcom");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome T");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To R");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Ri");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rin");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rino");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rino S");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rino sh");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rino Sho");//Toxic Codes
-  client.channels.find('id', '531790845461135371').setName("Welcome To Rino Shop");//Toxic Codes
-    }, 4000);
-  });
 client.login(process.env.BOT_TOKEN);
