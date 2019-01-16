@@ -11,12 +11,12 @@ client.on('ready', () => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('531778654976606218').setName(`⟫『 Members: ${memberCount} 』⟪`);
+    client.channels.get('531778654976606218').setName(`『 Members: ${memberCount} 』`);
 });
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('531778654976606218').setName(`⟫『 Members: ${memberCount} 』⟪`);
+    client.channels.get('531778654976606218').setName(`『 Members: ${memberCount} 』`);
 });
 client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
