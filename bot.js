@@ -72,16 +72,6 @@ client.on("message", message => {
   message.author.sendEmbed(embed);
  }
  });
-client.on('message', message => {//Toxic Codes
-              if (!message.channel.guild) return;
-      if(message.content =='.count')//Toxic Codes
-      var IzRo = new Discord.RichEmbed()//Toxic Codes
-      .setThumbnail(message.author.iconURL)//Toxic Codes
-      .setFooter(message.author.username, message.author.avatarURL)
-      .setTitle(' MemberCount')//Toxic Codes
-      .addBlankField(true)//Toxic Codes
-      .addField('.',`${message.guild.memberCount}`)//Toxic Code
-    });//Toxic Codes
 client.on("message", message => {
       if (message.content === ".ping") {
       const embed = new Discord.RichEmbed()
@@ -135,21 +125,6 @@ client.on('message', message => {
    message.channel.sendMessage(args.join("  "))
   }
 });
-var prefix = ".";
-client.on('message', async message => {//Toxic Codes
-          if(message.content.startsWith(prefix + "تفعيل")) {//Toxic Codes
-            message.member.addRole(message.guild.roles.find("name", "-Member"));
-            message.reply("** تم تفعيلك استمتع 🚀   **")//Toxic Codes
-			.then(msg => {msg.delete(3000)});
-          }//Toxic Codes
-        }); //Toxic Codes
-client.on('message', async message => {//Toxic Codes
-          if(message.content.startsWith("تفعيل.")) {//Toxic Codes
-            message.member.addRole(message.guild.roles.find("name", "-Member"));
-            message.reply("** تم تفعيلك استمتع 🚀   **")//Toxic Codes
-			.then(msg => {msg.delete(3000)});
-          }//Toxic Codes
-        }); //Toxic Codes
 client.on("message", (message) => {
    if (message.content.startsWith(".new")) {     
         const reason = message.content.split(" ").slice(1).join(" ");     
@@ -208,7 +183,7 @@ client.on('message', message => {
 if (message.content.split(' ')[0] == '.bc')
  message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-member.send( `${member} ` + "**" + `RinoBroadcast v1.0` + " : ** " + message.content.substr(3));
+member.send( `${member} ` + "**" + message.content.substr(3));
                                                             message.delete();
 															
 });
