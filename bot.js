@@ -40,11 +40,13 @@ if (msg.content === '.help') {
     msg.reply(':envelope: | تم ارسال الرساله في الخاص');
   }
 });
+
 client.on('message', msg => {
 if (msg.content === '.ip') {
-    msg.reply('RinoZone.tk :grin:');
+    msg.reply('RinoZone.tk');
   }
 });
+
 client.on("message", message => {
     var prefix = ".";
  
